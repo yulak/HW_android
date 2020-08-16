@@ -1,0 +1,7 @@
+<resources>
+    <string name="weather">Weather</string>
+    <string name="notAdd">Your city will be selected here</string>
+    <string name="textCity">NameCity</string>
+    <string name="buttonAdd">Add</string>
+    <string name="temperature" translatable="false">temperature</string>
+</resources>
