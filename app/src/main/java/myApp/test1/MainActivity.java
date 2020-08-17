@@ -2,6 +2,7 @@ package myApp.test1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,5 +25,7 @@ public class MainActivity extends AppCompatActivity {
           }
       });
 
+      startActivity(new Intent(this, MainCity.class));
+      startActivity(new Intent(this, SettingsActivity.class));
     }
 }
