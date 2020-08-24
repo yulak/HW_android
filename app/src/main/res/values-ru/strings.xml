@@ -1,8 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
     <string name="weather">Погода</string>
     <string name="notAdd">Здесь будет выбран ваш город</string>
     <string name="textCity">Название города</string>
     <string name="buttonAdd">Добавить</string>
+    <string name="button2" translatable="false">Города</string>
     <string name="temperature" translatable="false">Температура</string>
+    <string name="chooseCity">Выберете город</string>
+    <string name="checkBoxWindSpeed">Скорость ветра</string>
+    <string name="checkBoxMoisturePercentage">Процент влажности</string>
+    <string name="checkBoxSunsetTime">Время заката</string>
+    <string name="BlackStyle">Черная тема</string>
+    <string name="OnlyWeather">Только погода</string>
+    <string name="switch5">Пока еще не придумал</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
 </resources>
