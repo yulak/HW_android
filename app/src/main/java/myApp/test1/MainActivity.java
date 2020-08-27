@@ -4,15 +4,17 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements Constants{
 
     private static final String TEXT_CITY = "TEXT_CITY";
 
@@ -31,17 +33,37 @@ public class MainActivity extends AppCompatActivity {
 
       final TextView cityTextView = findViewById(R.id.nameCity);
       Button buttonCity = findViewById(R.id.buttonCity);
-
       buttonCity.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View view) {
-              cityTextView.setText(R.string.textCity);
+              /*cityTextView.setText(R.string.textCity);*/
+              try {
+                  Intent intent = new Intent(MainActivity.this, MainCity.class);
+                  startActivity(intent);finish();
+              }catch (Exception e){
+
+              }
           }
       });
 
 
-      startActivity(new Intent(this, MainCity.class));
-      startActivity(new Intent(this, SettingsActivity.class));
+            final Button site = findViewById(R.id.buttonWeb);
+            Button go = findViewById(R.id.buttonWeb);
+            go.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String url = site.getText().toString();
+                    Uri uri = Uri.parse("https://yandex.ru/pogoda/moscow");
+                    Intent browser = new Intent(Intent.ACTION_VIEW, uri);
+                    startActivity(browser);
+                }
+            });
+
+
+
+
+      /*startActivity(new Intent(this, MainCity.class));
+      startActivity(new Intent(this, SettingsActivity.class));*/
     }
 
     @Override
