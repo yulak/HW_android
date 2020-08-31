@@ -2,7 +2,9 @@ package myApp.test1;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -14,14 +16,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements Constants{
+public class MainActivity extends FragmentActivity {
 
     private static final String TEXT_CITY = "TEXT_CITY";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.main_layout);
+        /*setContentView(R.layout.activity_main);
         String instanceState;
         if (savedInstanceState == null){
             instanceState = "Первый зпуск";
@@ -36,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements Constants{
       buttonCity.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View view) {
-              /*cityTextView.setText(R.string.textCity);*/
+              *//*cityTextView.setText(R.string.textCity);*//*
               try {
                   Intent intent = new Intent(MainActivity.this, MainCity.class);
                   startActivity(intent);finish();
@@ -57,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements Constants{
                     Intent browser = new Intent(Intent.ACTION_VIEW, uri);
                     startActivity(browser);
                 }
-            });
+            });*/
 
 
 
